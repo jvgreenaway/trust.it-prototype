@@ -1,21 +1,67 @@
 
 $triangle-size: 0.5em
 
+$hight: 8em
+
 .result
   background-color: white
-  padding: 0.5em 1em
   +clearfix
-
-.result__title
-.result__author
-
-
+  border-bottom: 1px solid #eee
 
 .result__trust
   float: left
   background-color: blue
+  height: $hight
+  width: 20%
+
+.result__content
+  padding-left: 0.5em
+  float: left
+  width: 80%
+  height: $hight
+
+
+
+.result__title,
+.result__author,
+.result__source,
+.result__excerpt
+  font-size: 16px
+  line-height: 24px
+  margin: 0
+
+.result__author,
+.result__source
+  float: left
+
+
+.result__title
+  margin-top: 0.5em
+
+.result__author,
+.result__excerpt
+  clear: left
+
+.result__author
+  &::after
+    content: " • "
+    padding-right: 0.25em
+
+
+.result__excerpt
+  font-size: 14px
+  line-height: 20px
+  padding-top: 0.5em
+
+
+
+
+.result__trust
+  text-align: center
+  padding-top: 1em
 
 .result__trust__value
+  font-size: 2em
 
 
 
