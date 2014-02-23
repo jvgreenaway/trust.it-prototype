@@ -16,6 +16,7 @@
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="bower_components/normalize-css/normalize.css">
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
   </head>
@@ -26,26 +27,7 @@
 
       <nav id="nav" class="nav">
 
-        <div class="nav__search">
-          <form action="/">
-            <input type="search" class="nav__search-input">
-            <button class="nav__search-btn">Search</button>
-          </form>
-        </div>
-
-        <div class="nav__results">
-          <div class="result">
-            <!-- Template result item  -->
-            <h4 class="result__title">This is the title of the article</h4>
-            <p class="result__author">Author name</p>
-            <p class="result__source">The Sunday Times</p>
-            <p class="result__excerpt">A <span class="inline-result">passage</span> or quotation taken or selected from a book, document, film, or the like; extract. verb (used with object). 2. to take or select (a passage) from a book, film</p>
-          </div>
-        </div>
-
-
         <div class="nav__filters">
-
           <div class="nav__filters__media">
             <h3 class="nav__filters__title">Media types</h3>
 
@@ -73,7 +55,6 @@
               <input type="radio" id="filter-media-video" name="filter-media" value="video">
               <label for="filter-media-video">Video</label>
             </div>
-
           </div>
 
 
@@ -94,7 +75,6 @@
               <input type="radio" id="filter-net-large" name="filter-net" value="large">
               <label for="filter-net-large">Large <small>Full web search</small></label>
             </div>
-
           </div>
 
 
@@ -102,7 +82,6 @@
             <h3 class="nav__filters__title">Sources</h3>
 
             <ol>
-
               <li>
                 <input type="checkbox" checked id="" name="" value="">
                 <label for="">Source A <small>source.co.uk</small></label>
@@ -115,21 +94,50 @@
                 <input type="checkbox" checked id="" name="" value="">
                 <label for="">Source C <small>mysite.org</small></label>
               </li>
-
             </ol>
-
           </div>
-
         </div>
 
+
+        <div class="nav__search">
+          <form action="/">
+            <input type="search" class="nav__search-input">
+            <button class="nav__search-btn">Search</button>
+          </form>
+        </div>
+
+
+        <div class="nav__results">
+          <div class="result">
+
+            <div class="result__trust trust--high">
+              <button class="result__trust__vote--up"></button>
+              <div class="result__trust__value">162</div>
+              <button class="result__trust__vote--down"></button>
+            </div>
+
+            <h4 class="result__title">This is the title of the article</h4>
+            <p class="result__author">Author name</p>
+            <p class="result__source">The Sunday Times</p>
+            <p class="result__excerpt">A <span class="inline-result">passage</span> or quotation taken or selected from a book, document, film, or the like; extract. verb (used with object). 2. to take or select (a passage) from a book, film</p>
+          </div>
+        </div>
       </nav>
 
       <section id="preview" class="preview">
-        <!-- Load iframe here -->
+        <div class="preview__controls">
+          <button><span class="icon-warning"></span>test</button>
+        </div>
+
+        <div id="iframe-wrapper" class="preview__iframe">
+          <iframe src="preview.html" width="20px" height="20px" frameborder="0"></iframe>
+        </div>
       </section>
 
     </div>
 
+
+    <script src="bower_components/jquery/jquery.js"></script>
 
     <!-- build:js scripts/plugins.js -->
     <script src="bower_components/sass-bootstrap/js/affix.js"></script>
