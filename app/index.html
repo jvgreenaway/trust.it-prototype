@@ -26,12 +26,6 @@
     <div id="container" class="container">
 
       <nav id="nav" class="nav">
-        <div class="nav__search">
-          <form action="/">
-            <input type="search" class="nav__search-input">
-            <button class="nav__search-btn">Search</button>
-          </form>
-        </div>
 
         <div class="nav__filters">
           <div class="nav__filters__media">
@@ -104,9 +98,24 @@
           </div>
         </div>
 
+
+        <div class="nav__search">
+          <form action="/">
+            <input type="search" class="nav__search-input">
+            <button class="nav__search-btn">Search</button>
+          </form>
+        </div>
+
+
         <div class="nav__results">
           <div class="result">
-            <!-- Template result item  -->
+
+            <div class="result__trust trust--high">
+              <button class="result__trust__vote--up"></button>
+              <div class="result__trust__value">162</div>
+              <button class="result__trust__vote--down"></button>
+            </div>
+
             <h4 class="result__title">This is the title of the article</h4>
             <p class="result__author">Author name</p>
             <p class="result__source">The Sunday Times</p>
@@ -116,7 +125,10 @@
       </nav>
 
       <section id="preview" class="preview">
-        <div class="preview__controls"></div>
+        <div class="preview__controls">
+          <button><span class="icon-warning"></span>test</button>
+        </div>
+
         <div id="iframe-wrapper" class="preview__iframe">
           <iframe src="preview.html" width="20px" height="20px" frameborder="0"></iframe>
         </div>
@@ -124,6 +136,8 @@
 
     </div>
 
+
+    <script src="bower_components/jquery/jquery.js"></script>
 
     <!-- build:js scripts/plugins.js -->
     <script src="bower_components/sass-bootstrap/js/affix.js"></script>
