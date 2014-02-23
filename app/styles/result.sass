@@ -1,4 +1,49 @@
+
+$triangle-size: 0.5em
+
 .result
+  background-color: white
+  padding: 0.5em 1em
+  +clearfix
 
 .result__title
 .result__author
+
+
+
+.result__trust
+  float: left
+  background-color: blue
+
+.result__trust__value
+
+
+
+.result__trust__vote
+  background-color: transparent
+  width: 2em
+  height: 1.5em
+  border: none
+  position: relative
+
+  &::before
+    content: ""
+    width: 0
+    height: 0
+    position: absolute
+    left: $triangle-size
+
+.result__trust__vote--up
+  &::before
+    top: 0
+    border-left: $triangle-size solid transparent
+    border-right: $triangle-size solid transparent
+    border-bottom: $triangle-size solid white
+
+.result__trust__vote--down
+  &::before
+    bottom: 0
+    border-left: $triangle-size solid transparent
+    border-right: $triangle-size solid transparent
+    border-top: $triangle-size solid white
+
